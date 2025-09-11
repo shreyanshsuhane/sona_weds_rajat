@@ -1,0 +1,371 @@
+body {
+    background-color: rgb(24, 87, 150);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* <!--==================== compatability pop up styling ====================--> */
+
+.compatibility {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.comp-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.comp-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    select {
+        width: 100%;
+        padding: 18%;
+        margin-bottom: 15px;
+        border: 3px solid #03bcbc;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+        background-color: #242425c4;
+        font-size: 16px;
+        color: #f5f5f5;
+    }
+}
+
+/* Style the h2 heading */
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the form container */
+form {
+    background-color: #111111d1;
+    border: 1px solid #026f79;
+    padding: 5%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 130px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+/* Style the select inputs */
+select {
+    width: 100%;
+    padding: 1.5%;
+    margin-bottom: 15px;
+    border: 3px solid #03bcbc;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: #242425c4;
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #016080;
+    color: #8ad2f9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the paragraph below the form */
+p {
+    margin-top: 20px;
+}
+
+/* Style the link for adding a new location */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Young+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* <!--==================== homepage styling ====================--> */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+  height: auto; */
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(83 125 125);
+}
+
+
+/* <!--==================== nav bar ====================--> */
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: #000000ee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav,
+.nav .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+a {
+    font-size: larger;
+    color: #56a9f1;
+}
+
+.nav .logo {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.nav .nav-links {
+    column-gap: 20px;
+    list-style: none;
+}
+
+.nav .nav-links a {
+    transition: all 0.2s linear;
+}
+
+.nav.openSearch .nav-links a {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav .search-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav .search-box {
+    position: absolute;
+    right: 250px;
+    height: 45px;
+    max-width: 555px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s linear;
+}
+
+.nav.openSearch .search-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    left: 15px;
+    color: #050505de;
+    transform: translateY(-50%);
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+    display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 1160px) {
+    .nav {
+        padding: 15px 100px;
+    }
+
+    .nav .search-box {
+        right: 150px;
+    }
+
+    a {
+        font-size: larger;
+        color: #56a9f1;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav {
+        padding: 15px 50px;
+    }
+
+    .nav .search-box {
+        right: 100px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav .navOpenBtn,
+    .nav .navCloseBtn {
+        display: block;
+    }
+
+    .nav {
+        padding: 15px 20px;
+    }
+
+    .nav .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        max-width: 280px;
+        width: 100%;
+        padding-top: 100px;
+        row-gap: 30px;
+        flex-direction: column;
+        background-color: #11101d;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        z-index: 100;
+        font-family: 'Playfair Display', serif;
+        /* Add this line */
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav.openNav .nav-links {
+        left: 0;
+    }
+
+    a {
+        font-size: larger;
+        color: #56a9f1;
+    }
+
+    .nav .navOpenBtn {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav .navCloseBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav .search-box {
+        top: calc(100% + 10px);
+        max-width: calc(100% - 20px);
+        right: 50%;
+        transform: translateX(50%);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    /* Add this line */
+}
+
+.nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    transition: background 0.2s, transform 0.2s;
+    padding: 10px 20px;
+    /* Increase padding here */
+}
+
+/* Add hover effect */
+.nav .nav-links a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* Change this to your desired text color on hover */
+    padding: 10px 20px;
+    /* Increase padding on hover */
+}
