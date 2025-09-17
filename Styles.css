@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  line-height: 2.0;
   color: #2C1810;
   background: linear-gradient(135deg, #FFF8DC 0%, #FFEBCD 25%, #FFE4E1 50%, #F0E68C 75%, #FFF8DC 100%);
   min-height: 100vh;
@@ -485,7 +485,7 @@ main {
 
 .event-card {
   background: linear-gradient(135deg, rgba(255, 248, 220, 0.95) 0%, rgba(255, 228, 225, 0.95) 100%);
-  padding: 2.5rem;
+  padding: 1.5rem;
   border-radius: 20px;
   border: 3px solid #dda10b;
   backdrop-filter: blur(10px);
@@ -563,7 +563,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .event-card h3 {
@@ -586,7 +586,7 @@ main {
 }
 
 .event-details {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .event-time {
@@ -632,6 +632,7 @@ main {
 .sub-event {
   background: rgba(255, 248, 220, 0.9);
   padding: 1.5rem;
+  line-height: 1.5;
   border-radius: 15px;
   border-left: 4px solid #DC143C;
   box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
@@ -709,7 +710,7 @@ main {
 
 .event-button {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: linear-gradient(135deg, #DC143C 0%, #ff698f 50%, #dda10b 100%);
   border: 3px solid #b55611 ;
   padding: 1.5rem 2rem;
