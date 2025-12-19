@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sonali & Rajat - Wedding Invitation</title>
-  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="public/Styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,7 +21,7 @@
   </div>
 
   <!-- Hero Section -->
-  <header class="hero" style="background-image: url('bhedaghat.jpeg');">
+  <header class="hero" style="background-image: url('public/bhedaghat.jpeg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="couple-names">Sonali <span class="heart">&</span> Rajat</h1>
@@ -33,10 +33,11 @@
   <!-- Navigation Bar -->
   <nav class="nav">
     <div class="logo">
-      <img src="SR-logo.png" alt="Sonali & Rajat" class="logo-image">
+      <img src="public/SR-logo.png" alt="Sonali & Rajat" class="logo-image">
     </div>
     <ul class="nav-links">
       <li><a href="#venue">📍 Venue</a></li>
+      <li><a href="#mehendi">🎨 Mehendi</a></li>
       <li><a href="#sangeet">💃 Sangeet</a></li>
       <li><a href="#haldi">🌼 Haldi</a></li>
       <li><a href="#wedding">💍 Wedding</a></li>
@@ -54,7 +55,7 @@
         <div class="venue-cards">
           <div class="venue-card">
             <div class="venue-image">
-              <img src="hotel-options-lawns-is.jpg" alt="Options Lawns" loading="lazy">
+              <img src="public/hotel-options-lawns-is.jpg" alt="Options Lawns" loading="lazy">
             </div>
             <div class="venue-content">
               <div class="venue-icon">🌿</div>
@@ -67,7 +68,7 @@
           </div>
           <div class="venue-card">
             <div class="venue-image">
-              <img src="suhane_villa.jpeg" alt="Suhane Villa" loading="lazy">
+              <img src="public/suhane_villa.jpeg" alt="Suhane Villa" loading="lazy">
             </div>
             <div class="venue-content">
               <div class="venue-icon">🏠</div>
@@ -88,6 +89,36 @@
         <h2 class="timeline-title">Wedding Celebrations</h2>
         <div class="timeline">
           
+          <!-- Mehendi Event -->
+          <div id="mehendi" class="timeline-item">
+            <div class="timeline-icon">🎨</div>
+            <div class="timeline-content">
+              <div class="event-card mehendi">
+                <div class="event-header">
+                  <h3>Mehendi Night</h3>
+                </div>
+                <div class="event-details">
+                  <div class="event-time">
+                    <span class="date">21st January 2026</span>
+                    <span class="time">5:00 PM onwards</span>
+                  </div>
+                  <div class="event-location">
+                    <span class="location-icon">📍</span>
+                    <span>Suhane Villa, Kachnar City, Jabalpur</span>
+                  </div>
+                </div>
+                <div class="event-buttons">
+                  <a class="button event-button" href="#" target="_blank">
+                    📅 RSVP & Details
+                  </a>
+                  <button class="button event-button" onclick="openModal('mehendiModal')">
+                    Theme: Pishta Green & Pink
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Sangeet Event -->
           <div id="sangeet" class="timeline-item">
             <div class="timeline-icon">💃</div>
@@ -95,7 +126,6 @@
               <div class="event-card sangeet">
                 <div class="event-header">
                   <h3>Sangeet & Jaggo Night + Ring Ceremony</h3>
-                  <span class="event-theme">Theme: Glam & Glitz</span>
                 </div>
                 <div class="event-details">
                   <div class="event-time">
@@ -107,9 +137,14 @@
                     <span>Options Lawn Hotel, Jabalpur</span>
                   </div>
                 </div>
-                <a class="button event-button" href="https://calendar.app.google/rFQUpXh5pGjinDVh7" target="_blank">
-                  📅 RSVP & Details
-                </a>
+                <div class="event-buttons">
+                  <a class="button event-button" href="https://calendar.app.google/rFQUpXh5pGjinDVh7" target="_blank">
+                    📅 RSVP & Details
+                  </a>
+                  <button class="button event-button" onclick="openModal('sangeetModal')">
+                    Theme: Glam & Glitz
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -121,7 +156,6 @@
               <div class="event-card haldi">
                 <div class="event-header">
                   <h3>Haldi (Carnival)</h3>
-                  <span class="event-theme">Theme: Orange & Rani Pink</span>
                 </div>
                 <div class="event-details">
                   <div class="event-time">
@@ -133,9 +167,14 @@
                     <span>Options Lawn Hotel, Jabalpur</span>
                   </div>
                 </div>
-                <a class="button event-button" href="https://calendar.app.google/4yP5H6n1PDJ5eTjg7" target="_blank">
-                  📅 RSVP & Details
-                </a>
+                <div class="event-buttons">
+                  <a class="button event-button" href="https://calendar.app.google/4yP5H6n1PDJ5eTjg7" target="_blank">
+                    📅 RSVP & Details
+                  </a>
+                  <button class="button event-button" onclick="openModal('haldiModal')">
+                    Theme: Orange & Rani Pink
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -196,6 +235,44 @@
       </div>
     </section>
 
+    <!-- Theme Modals -->
+    <!-- Mehendi Theme Modal -->
+    <div id="mehendiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mehendiModal')">&times;</span>
+        <h2>Mehendi Theme: Pishta Green & Pink 🎨</h2>
+        <p class="modal-description">Get inspired by these beautiful Mehendi looks!</p>
+        <div class="inspiration-gallery">
+          <img src="public/mehendi-theme.jpeg" alt="Mehendi Theme Inspiration">
+        </div>
+      </div>
+    </div>
+
+    <!-- Sangeet Theme Modal -->
+    <div id="sangeetModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('sangeetModal')">&times;</span>
+        <h2>Sangeet Theme: Glam & Glitz ✨</h2>
+        <p class="modal-description">Get inspired by these stunning looks for our Sangeet night!</p>
+        <div class="inspiration-gallery">
+          <img src="public/sangeet-theme.jpg" alt="Sangeet Inspiration 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Haldi Theme Modal -->
+    <div id="haldiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('haldiModal')">&times;</span>
+        <h2>Haldi Theme: Orange & Rani Pink 🌼</h2>
+        <p class="modal-description">Embrace the vibrant carnival vibes with these colorful inspirations!</p>
+        <div class="inspiration-gallery">
+          <img src="public/haldi-theme.png" alt="Haldi Theme Inspiration">
+          <img src="public/haldi-theme2.png" alt="Haldi Theme 2 Inspiration">
+        </div>
+      </div>
+    </div>
+
     <!-- Footer Message -->
     <footer class="footer">
       <div class="container">
@@ -209,6 +286,27 @@
       </div>
     </footer>
   </main>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  </script>
 </body>
 </html>
 
