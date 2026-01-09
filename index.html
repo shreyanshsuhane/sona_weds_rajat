@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Floating Icons -->
   <div class="floating-icons">
     <div class="floating-icon">🏵️</div>
@@ -26,18 +25,18 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="couple-names">Sonali <span class="heart">&</span> Rajat</h1>
+      <!-- <p class="tagline">Together forever, starting January 2025</p> -->
       <div class="decorative-line"></div>
     </div>
   </header>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav class="nav">
     <div class="logo">
       <img src="public/SR-logo.png" alt="Sonali & Rajat" class="logo-image">
     </div>
     <ul class="nav-links">
       <li><a href="#venue">📍 Venue</a></li>
-      <li><a href="#lagan">🪔 Lagun Utsav</a></li>
       <li><a href="#mehendi">🎨 Mehendi</a></li>
       <li><a href="#sangeet">💃 Sangeet</a></li>
       <li><a href="#haldi">🌼 Haldi</a></li>
@@ -45,9 +44,9 @@
     </ul>
   </nav>
 
+  <!-- Main Content -->
   <main>
-
-    <!-- Venue -->
+    <!-- Venue Section -->
     <section id="venue" class="event-section">
       <div class="container">
         <div class="section-header">
@@ -56,25 +55,26 @@
         <div class="venue-cards">
           <div class="venue-card">
             <div class="venue-image">
-              <img src="public/hotel-options-lawns-is.jpg" alt="Options Lawn">
+              <img src="public/hotel-options-lawns-is.jpg" alt="Options Lawns" loading="lazy">
             </div>
             <div class="venue-content">
+              <div class="venue-icon">🌿</div>
               <h3>Options Lawn Hotel</h3>
               <p>Main celebration venue (Near Bhedaghat)</p>
-              <a class="button primary" href="https://maps.app.goo.gl/sBcWHCkbmXpwTa8f6" target="_blank">
+              <a class="button primary" href="https://maps.app.goo.gl/sBcWHCkbmXpwTa8f6?g_st=ipc" target="_blank">
                 📍 Get Directions
               </a>
             </div>
           </div>
-
           <div class="venue-card">
             <div class="venue-image">
-              <img src="public/suhane_villa.jpeg" alt="Suhane Villa">
+              <img src="public/suhane_villa.jpeg" alt="Suhane Villa" loading="lazy">
             </div>
             <div class="venue-content">
+              <div class="venue-icon">🏠</div>
               <h3>Suhane Villa</h3>
               <p>Kachnar City, Jabalpur</p>
-              <a class="button primary" href="https://maps.app.goo.gl/SbyYg2GxFjdAz2ug9" target="_blank">
+              <a class="button primary" href="https://maps.app.goo.gl/SbyYg2GxFjdAz2ug9?g_st=ipc" target="_blank">
                 📍 Get Directions
               </a>
             </div>
@@ -83,81 +83,150 @@
       </div>
     </section>
 
-    <!-- Timeline -->
+    <!-- Events Timeline -->
     <section class="timeline-section">
       <div class="container">
         <h2 class="timeline-title">Wedding Celebrations</h2>
         <div class="timeline">
-
-          <!-- Lagun Utsav (MATCHES Mehendi STRUCTURE EXACTLY) -->
-          <div id="lagan" class="timeline-item">
-            <div class="timeline-icon">🪔</div>
-            <div class="timeline-content">
-              <div class="event-card lagan">
-                <h3>Lagun Utsav</h3>
-                <div class="event-details">
-                  <!-- Date + Time on same line, using SAME .date styling -->
-                  <span class="date">20th January 2025</span> <span class="time">5:00 PM – 10:00 PM</span>
-                  <!-- Keep structure identical: no extra wrappers -->
-                  <p>📍 Rukmani 2 Hall, Kachnar Club, Vijay Nagar, Jabalpur</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mehendi -->
+          
+          <!-- Mehendi Event -->
           <div id="mehendi" class="timeline-item">
             <div class="timeline-icon">🎨</div>
             <div class="timeline-content">
               <div class="event-card mehendi">
-                <h3>Mehendi Night</h3>
+                <div class="event-header">
+                  <h3>Mehendi Night</h3>
+                </div>
                 <div class="event-details">
-                  <span class="date">21st January 2025</span>
-                  <span class="time">5:00 PM onwards</span>
-                  <p>📍 Suhane Villa, Jabalpur</p>
+                  <div class="event-time">
+                    <span class="date">21st January 2026</span>
+                    <span class="time">5:00 PM onwards</span>
+                  </div>
+                  <div class="event-location">
+                    <span class="location-icon">📍</span>
+                    <span>Suhane Villa, Kachnar City, Jabalpur</span>
+                  </div>
+                </div>
+                <div class="event-buttons">
+                  <a class="button event-button" href="#" target="_blank">
+                    📅 RSVP & Details
+                  </a>
+                  <button class="button event-button" onclick="openModal('mehendiModal')">
+                    Theme: Pishta Green & Pink
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Sangeet -->
+          <!-- Sangeet Event -->
           <div id="sangeet" class="timeline-item">
             <div class="timeline-icon">💃</div>
             <div class="timeline-content">
               <div class="event-card sangeet">
-                <h3>Sangeet & Ring Ceremony</h3>
+                <div class="event-header">
+                  <h3>Sangeet & Jaggo Night + Ring Ceremony</h3>
+                </div>
                 <div class="event-details">
-                  <span class="date">22nd January 2025</span>
-                  <span class="time">7:30 PM onwards</span>
-                  <p>📍 Options Lawn Hotel</p>
+                  <div class="event-time">
+                    <span class="date">22nd January 2025</span>
+                    <span class="time">7:30 PM onwards</span>
+                  </div>
+                  <div class="event-location">
+                    <span class="location-icon">📍</span>
+                    <span>Options Lawn Hotel, Jabalpur</span>
+                  </div>
+                </div>
+                <div class="event-buttons">
+                  <a class="button event-button" href="https://calendar.app.google/rFQUpXh5pGjinDVh7" target="_blank">
+                    📅 RSVP & Details
+                  </a>
+                  <button class="button event-button" onclick="openModal('sangeetModal')">
+                    Theme: Glam & Glitz
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Haldi -->
+          <!-- Haldi Event -->
           <div id="haldi" class="timeline-item">
             <div class="timeline-icon">🌼</div>
             <div class="timeline-content">
               <div class="event-card haldi">
-                <h3>Haldi Ceremony</h3>
+                <div class="event-header">
+                  <h3>Haldi (Carnival)</h3>
+                </div>
                 <div class="event-details">
-                  <span class="date">23rd January 2025</span>
-                  <span class="time">11:00 AM onwards</span>
-                  <p>📍 Options Lawn Hotel</p>
+                  <div class="event-time">
+                    <span class="date">23rd January 2025</span>
+                    <span class="time">11:00 AM onwards</span>
+                  </div>
+                  <div class="event-location">
+                    <span class="location-icon">📍</span>
+                    <span>Options Lawn Hotel, Jabalpur</span>
+                  </div>
+                </div>
+                <div class="event-buttons">
+                  <a class="button event-button" href="https://calendar.app.google/4yP5H6n1PDJ5eTjg7" target="_blank">
+                    📅 RSVP & Details
+                  </a>
+                  <button class="button event-button" onclick="openModal('haldiModal')">
+                    Theme: Orange & Rani Pink
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Wedding -->
+          <!-- Wedding Event -->
           <div id="wedding" class="timeline-item">
             <div class="timeline-icon">💍</div>
             <div class="timeline-content">
               <div class="event-card wedding">
-                <h3>Wedding Ceremony</h3>
-                <p>23rd–24th January 2025</p>
-                <p>📍 Options Lawn Hotel, Jabalpur</p>
+                <div class="event-header">
+                  <h3>Wedding Ceremony</h3>
+                </div>
+                <div class="event-details">
+                  <div class="wedding-events">
+                    <div class="sub-event">
+                      <strong>Baraat Swagat</strong>
+                      <div class="event-time">
+                        <span class="date">23rd January 2025</span>
+                        <span class="time">8:30 PM</span>
+                      </div>
+                      <div class="event-location">
+                        <span class="location-icon">📍</span>
+                        <span>Options Lawn Hotel, Jabalpur (Near Bhedaghat)</span>
+                      </div>
+                    </div>
+                    <div class="sub-event">
+                      <strong>Mandap / Phere</strong>
+                      <div class="event-time">
+                        <span class="date">24th January 2025</span>
+                        <span class="time">2:00 AM</span>
+                      </div>
+                      <div class="event-location">
+                        <span class="location-icon">📍</span>
+                        <span>Options Lawn Hotel, Jabalpur (Near Bhedaghat)</span>
+                      </div>
+                    </div>
+                    <div class="sub-event">
+                      <strong>Vidai</strong>
+                      <div class="event-time">
+                        <span class="date">24th January 2025</span>
+                        <span class="time">7:00 AM</span>
+                      </div>
+                      <div class="event-location">
+                        <span class="location-icon">📍</span>
+                        <span>Suhane Villa, Kachnar City, Jabalpur</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="button event-button" href="https://calendar.app.google/h9Q42v7gBsVhKwgc6" target="_blank">
+                  📅 RSVP & Details
+                </a>
               </div>
             </div>
           </div>
@@ -166,15 +235,81 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Theme Modals -->
+    <!-- Mehendi Theme Modal -->
+    <div id="mehendiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mehendiModal')">&times;</span>
+        <h2>Mehendi Theme: Pishta Green & Pink 🎨</h2>
+        <p class="modal-description">Get inspired by these beautiful Mehendi looks!</p>
+        <div class="inspiration-gallery">
+          <img src="public/mehendi-theme.jpeg" alt="Mehendi Theme Inspiration">
+        </div>
+      </div>
+    </div>
+
+    <!-- Sangeet Theme Modal -->
+    <div id="sangeetModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('sangeetModal')">&times;</span>
+        <h2>Sangeet Theme: Glam & Glitz ✨</h2>
+        <p class="modal-description">Get inspired by these stunning looks for our Sangeet night!</p>
+        <div class="inspiration-gallery">
+          <img src="public/sangeet-theme.jpeg" alt="Sangeet Inspiration 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Haldi Theme Modal -->
+    <div id="haldiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('haldiModal')">&times;</span>
+        <h2>Haldi Theme: Orange & Rani Pink 🌼</h2>
+        <p class="modal-description">Embrace the vibrant carnival vibes with these colorful inspirations!</p>
+        <div class="inspiration-gallery">
+          <img src="public/haldi-theme.jpeg" alt="Haldi Theme Inspiration">
+          <img src="public/haldi-theme2.jpeg" alt="Haldi Theme 2 Inspiration">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Message -->
     <footer class="footer">
       <div class="container">
-        <h3>We can’t wait to celebrate with you 🤍</h3>
-        <p>Your presence is the greatest gift</p>
+        <div class="footer-content">
+          <h3>We can't wait to celebrate with you!</h3>
+          <p>Your presence is the greatest gift we could ask for</p>
+          <div class="contact-info">
+            <p>For any questions, feel free to reach out to our families</p>
+          </div>
+        </div>
       </div>
     </footer>
-
   </main>
 
+  <!-- JavaScript for Modal -->
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  </script>
 </body>
 </html>
+
+
+
+
